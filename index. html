@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paithani Story</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #fff8ee;
+            color: #333;
+        }
+
+        header {
+            background: #6b1e3f;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        h2 {
+            color: #6b1e3f;
+        }
+
+        .info {
+            background: #fff0f5;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .section {
+            margin-top: 25px;
+        }
+
+        footer {
+            background: #6b1e3f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🦚 Paithani Story</h1>
+    <p>Discover the story behind your saree</p>
+</header>
+
+<div class="card">
+
+    <h2>🌸 Welcome</h2>
+
+    <p>
+        Welcome to the world of Paithani.
+        Every saree carries a story of tradition,
+        creativity and craftsmanship.
+    </p>
+
+    <div class="section">
+        <h2>🧵 Saree Information</h2>
+
+        <div class="info">
+            <p><b>Saree ID:</b> P001</p>
+            <p><b>Design:</b> Peacock</p>
+            <p><b>Type:</b> Traditional Paithani</p>
+            <p><b>Craft:</b> Handwoven</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎨 Design Story</h2>
+
+        <p>
+            The peacock design is one of the beautiful
+            traditional motifs associated with Paithani.
+            Its detailed patterns showcase the skill
+            involved in handloom weaving.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>👩‍🎨 Artisan Story</h2>
+
+        <p>
+            Behind every handwoven saree is the skill,
+            patience and creativity of a craftsperson.
+            This section will tell the customer's story
+            about the person who created their saree.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🏛️ Heritage</h2>
+
+        <p>
+            Paithani is an important part of Maharashtra's
+            handloom heritage and is known for its
+            distinctive designs and weaving tradition.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🔐 Authenticity</h2>
+
+        <div class="info">
+            <p><b>Product ID:</b> P001</p>
+            <p><b>Status:</b> Demo Product</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>🦚 Discover • Connect • Preserve Heritage</p>
+</footer>
+
+</body>
+</html>
