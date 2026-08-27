@@ -21,7 +21,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #6b1e3f, #8f3159);
+  background: linear-gradient(135deg, #6b1e3f, #963f63);
   color: white;
   text-align: center;
   padding: 45px 20px;
@@ -87,6 +87,31 @@ p {
   font-size: 17px;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.video-box {
+  margin-top: 20px;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+  margin-bottom: 20px;
+  background: #000;
+}
+
 .qr-box {
   text-align: center;
   background: #fffaf3;
@@ -137,6 +162,14 @@ footer p {
   h2 {
     font-size: 22px;
   }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: auto;
+  }
 }
 </style>
 </head>
@@ -177,8 +210,8 @@ footer p {
 
     <p>
       The process requires skill, patience and countless hours of
-      hard work. Every design is woven with care so that the beauty
-      of this traditional art continues from one generation to another.
+      hard work. Every design is woven with care so that this
+      traditional art continues from one generation to another.
     </p>
 
     <div class="info">
@@ -209,6 +242,55 @@ footer p {
       When you wear a Paithani, you carry not only a beautiful saree,
       but also the story, skill, culture and tradition behind its creation.
     </p>
+  </div>
+
+  <div class="card">
+    <h2>📸 Paithani Gallery</h2>
+
+    <p>
+      A glimpse of the beauty and details of this Paithani.
+    </p>
+
+    <div class="gallery">
+
+      <img
+        src="IMG-20260827-WA0005.jpg"
+        alt="Paithani"
+      >
+
+      <img
+        src="IMG-20260827-WA0018.jpg"
+        alt="Paithani Design"
+      >
+
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎥 The Paithani Journey</h2>
+
+    <p>
+      Watch and discover the beauty, craftsmanship and tradition
+      behind Paithani.
+    </p>
+
+    <div class="video-box">
+
+      <video controls playsinline>
+        <source
+          src="VID-20260826-WA0002.mp4"
+          type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+      <video controls playsinline>
+        <source
+          src="VID-20260827-WA0014.mp4"
+          type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+    </div>
   </div>
 
   <div class="card">
@@ -253,4 +335,4 @@ footer p {
 </footer>
 
 </body>
-        </html>
+</html>
