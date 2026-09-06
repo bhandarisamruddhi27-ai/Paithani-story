@@ -7,1991 +7,1294 @@
 <title>Weave Gatha | Every Paithani Has a Story</title>
 
 <style>
-
-/* =========================================
-   FONTS
-========================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-
-/* =========================================
-   GLOBAL SETTINGS
-========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family:
-    "Noto Serif Devanagari",
-    "Playfair Display",
-    Georgia,
-    serif;
-
-    color: #472c2c;
-    line-height: 1.7;
-
-    background-color: #f7eedc;
-
-    /* Soft Paithani-style pattern */
+body{
+    font-family:"Noto Serif Devanagari","Playfair Display",Georgia,serif;
+    color:#472c2c;
+    line-height:1.7;
+    background-color:#f7eedc;
     background-image:
-
-    radial-gradient(
-        circle at 25px 25px,
-        rgba(183, 132, 39, 0.15) 2px,
-        transparent 3px
-    ),
-
-    radial-gradient(
-        circle at 70px 70px,
-        rgba(107, 30, 63, 0.08) 2px,
-        transparent 3px
-    ),
-
-    linear-gradient(
-        135deg,
-        rgba(255,250,238,0.8),
-        rgba(247,232,200,0.8)
-    );
-
-    background-size:
-    90px 90px,
-    90px 90px,
-    100% 100%;
+        radial-gradient(circle at 25px 25px,rgba(183,132,39,.15) 2px,transparent 3px),
+        radial-gradient(circle at 70px 70px,rgba(107,30,63,.08) 2px,transparent 3px),
+        linear-gradient(135deg,rgba(255,250,238,.8),rgba(247,232,200,.8));
+    background-size:90px 90px,90px 90px,100% 100%;
 }
 
-
-/* =========================================
-   FIXED PAITHANI SIDE BORDERS
-========================================= */
-
-.side-border {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 72px;
-    z-index: 100;
-    pointer-events: none;
-
-    background-color: #5b1638;
-
+.side-border{
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:72px;
+    z-index:100;
+    pointer-events:none;
+    background-color:#5b1638;
     background-image:
-
-    repeating-linear-gradient(
-        0deg,
-        transparent 0px,
-        transparent 42px,
-        rgba(210,161,52,0.6) 43px,
-        transparent 45px
-    ),
-
-    repeating-linear-gradient(
-        45deg,
-        rgba(210,161,52,0.20) 0px,
-        rgba(210,161,52,0.20) 2px,
-        transparent 2px,
-        transparent 10px
-    );
-
-    border-left: 5px solid #c99836;
-    border-right: 5px solid #c99836;
-
-    box-shadow:
-    0 0 12px rgba(75,20,45,0.3);
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 42px,
+            rgba(210,161,52,.6) 43px,
+            transparent 45px
+        ),
+        repeating-linear-gradient(
+            45deg,
+            rgba(210,161,52,.20) 0px,
+            rgba(210,161,52,.20) 2px,
+            transparent 2px,
+            transparent 10px
+        );
+    border-left:5px solid #c99836;
+    border-right:5px solid #c99836;
 }
 
-.left-border {
-    left: 0;
+.left-border{left:0;}
+.right-border{right:0;}
+
+.flower-decoration{
+    position:fixed;
+    z-index:-1;
+    opacity:.35;
+    font-size:35px;
+    pointer-events:none;
 }
 
-.right-border {
-    right: 0;
+.flower1{top:120px;left:90px;}
+.flower2{top:450px;right:95px;}
+.flower3{top:800px;left:100px;}
+.flower4{bottom:150px;right:100px;}
+
+.website{
+    max-width:1050px;
+    margin:auto;
+    padding:20px 35px;
 }
 
+/* HEADER */
 
-/* =========================================
-   FLORAL DECORATIONS
-========================================= */
-
-.flower-decoration {
-    position: fixed;
-    z-index: -1;
-    opacity: 0.35;
-    font-size: 35px;
-    pointer-events: none;
+header{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#641839,#8d3156,#641839);
+    color:white;
+    text-align:center;
+    padding:60px 30px 45px;
+    border-radius:0 0 35px 35px;
+    border-bottom:5px solid #d3a33f;
+    box-shadow:0 10px 30px rgba(73,20,43,.25);
 }
-
-.flower1 {
-    top: 120px;
-    left: 90px;
-}
-
-.flower2 {
-    top: 450px;
-    right: 95px;
-}
-
-.flower3 {
-    top: 800px;
-    left: 100px;
-}
-
-.flower4 {
-    bottom: 150px;
-    right: 100px;
-}
-
-
-/* =========================================
-   MAIN WEBSITE AREA
-========================================= */
-
-.website {
-    max-width: 1050px;
-    margin: auto;
-    padding: 20px 35px;
-}
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-header {
-    position: relative;
-    overflow: hidden;
-
-    background:
-    linear-gradient(
-        135deg,
-        #641839,
-        #8d3156,
-        #641839
-    );
-
-    color: white;
-
-    text-align: center;
-
-    padding: 60px 30px 45px;
-
-    border-radius: 0 0 35px 35px;
-
-    border-bottom: 5px solid #d3a33f;
-
-    box-shadow:
-    0 10px 30px rgba(73,20,43,0.25);
-}
-
-
-/* Header Peacock */
 
 .header-peacock-left,
-.header-peacock-right {
-    position: absolute;
-    font-size: 120px;
-    opacity: 0.25;
+.header-peacock-right{
+    position:absolute;
+    font-size:120px;
+    opacity:.25;
 }
 
-.header-peacock-left {
-    left: 4%;
-    top: 15%;
+.header-peacock-left{
+    left:4%;
+    top:15%;
 }
 
-.header-peacock-right {
-    right: 4%;
-    top: 15%;
+.header-peacock-right{
+    right:4%;
+    top:15%;
 }
 
-
-.logo {
-    position: relative;
-    z-index: 2;
-
-    font-size: 58px;
-    color: #ffe29a;
-
-    letter-spacing: 2px;
-
-    font-family:
-    "Playfair Display",
-    Georgia,
-    serif;
+.logo{
+    position:relative;
+    z-index:2;
+    font-size:58px;
+    color:#ffe29a;
+    letter-spacing:2px;
 }
 
-.tagline {
-    position: relative;
-    z-index: 2;
-
-    margin-top: 10px;
-    font-size: 21px;
-    color: #fff4d8;
+.tagline{
+    position:relative;
+    z-index:2;
+    margin-top:10px;
+    font-size:21px;
+    color:#fff4d8;
 }
 
-.header-line {
-    width: 55%;
-    height: 2px;
-
-    margin: 18px auto;
-
-    background:
-    linear-gradient(
-        to right,
-        transparent,
-        #d5a63e,
-        transparent
-    );
+.header-line,
+.section-line{
+    height:2px;
+    margin:18px auto;
+    background:linear-gradient(to right,transparent,#d5a63e,transparent);
 }
 
-.intro {
-    position: relative;
-    z-index: 2;
+.header-line{width:55%;}
 
-    max-width: 780px;
-    margin: auto;
-
-    font-size: 17px;
-    color: #fff8e8;
+.intro{
+    position:relative;
+    z-index:2;
+    max-width:780px;
+    margin:auto;
+    font-size:17px;
+    color:#fff8e8;
 }
 
-
-/* =========================================
-   LANGUAGE BUTTON
-========================================= */
-
-.language-box {
-    position: relative;
-    z-index: 2;
-    margin-top: 25px;
+.language-box{
+    position:relative;
+    z-index:2;
+    margin-top:25px;
 }
 
-.lang-btn {
-    background: #fff3d6;
-    color: #651839;
-
-    border: 2px solid #d3a33f;
-
-    padding: 10px 22px;
-
-    margin: 5px;
-
-    border-radius: 30px;
-
-    cursor: pointer;
-
-    font-size: 15px;
-    font-weight: bold;
-
-    font-family: inherit;
-
-    transition: 0.3s;
+.lang-btn{
+    background:#fff3d6;
+    color:#651839;
+    border:2px solid #d3a33f;
+    padding:10px 22px;
+    margin:5px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    font-family:inherit;
+    transition:.3s;
 }
 
-.lang-btn:hover {
-    background: #d3a33f;
-    color: white;
+.lang-btn:hover,
+.lang-btn.active{
+    background:#d3a33f;
+    color:white;
 }
 
+/* NAVIGATION */
 
-/* =========================================
-   NAVIGATION
-========================================= */
-
-nav {
-    margin-top: 20px;
-    text-align: center;
+nav{
+    margin-top:20px;
+    text-align:center;
 }
 
-nav a {
-    display: inline-block;
-
-    color: #f7df9a;
-    text-decoration: none;
-
-    padding: 6px 10px;
-    margin: 3px;
-
-    font-size: 14px;
+nav a{
+    display:inline-block;
+    color:#f7df9a;
+    text-decoration:none;
+    padding:6px 10px;
+    margin:3px;
+    font-size:14px;
 }
 
-nav a:hover {
-    color: white;
+nav a:hover{
+    color:white;
 }
 
+/* CARD */
 
-/* =========================================
-   SECTION CARD
-========================================= */
-
-.card {
-    position: relative;
-
-    margin: 32px 0;
-
-    padding: 35px;
-
-    background:
-
-    linear-gradient(
+.card{
+    position:relative;
+    margin:32px 0;
+    padding:35px;
+    background:linear-gradient(
         135deg,
-        rgba(255,253,246,0.96),
-        rgba(255,246,225,0.95)
+        rgba(255,253,246,.96),
+        rgba(255,246,225,.95)
     );
-
-    border: 1px solid rgba(193,143,49,0.5);
-
-    border-radius: 25px;
-
-    box-shadow:
-    0 8px 25px rgba(79,42,31,0.12);
-
-    overflow: hidden;
+    border:1px solid rgba(193,143,49,.5);
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(79,42,31,.12);
+    overflow:hidden;
 }
 
-
-/* Decorative card corners */
-
-.card::before {
-    content: "❀";
-    position: absolute;
-    top: 8px;
-    left: 15px;
-
-    font-size: 28px;
-    color: #c8942e;
-    opacity: 0.65;
+.card::before,
+.card::after{
+    content:"❀";
+    position:absolute;
+    font-size:28px;
+    color:#c8942e;
+    opacity:.65;
 }
 
-.card::after {
-    content: "❀";
-    position: absolute;
-    bottom: 8px;
-    right: 15px;
-
-    font-size: 28px;
-    color: #c8942e;
-    opacity: 0.65;
+.card::before{
+    top:8px;
+    left:15px;
 }
 
-
-/* =========================================
-   HEADINGS
-========================================= */
-
-h2 {
-    text-align: center;
-
-    color: #681b3e;
-
-    font-size: 30px;
-
-    margin-bottom: 15px;
+.card::after{
+    bottom:8px;
+    right:15px;
 }
 
-h3 {
-    color: #71301f;
-    margin-bottom: 10px;
+h2{
+    text-align:center;
+    color:#681b3e;
+    font-size:30px;
+    margin-bottom:15px;
 }
 
-.section-line {
-    width: 65%;
-    height: 2px;
-
-    margin: 15px auto 25px;
-
-    background:
-
-    linear-gradient(
-        to right,
-        transparent,
-        #c79736,
-        transparent
-    );
+h3{
+    color:#71301f;
+    margin-bottom:10px;
 }
 
-
-/* =========================================
-   PAITHANI JOURNEY
-========================================= */
-
-.process-grid {
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(150px, 1fr));
-
-    gap: 18px;
-
-    margin-top: 25px;
+.section-line{
+    width:65%;
+    margin:15px auto 25px;
 }
 
-.process-step {
-    text-align: center;
+/* PROCESS */
 
-    background:
-    rgba(255,249,234,0.85);
-
-    border: 1px solid #e2c98f;
-
-    padding: 20px 12px;
-
-    border-radius: 18px;
-
-    transition: 0.3s;
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:18px;
+    margin-top:25px;
 }
 
-.process-step:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-    0 8px 20px rgba(98,30,55,0.15);
+.process-step{
+    text-align:center;
+    background:rgba(255,249,234,.85);
+    border:1px solid #e2c98f;
+    padding:20px 12px;
+    border-radius:18px;
+    transition:.3s;
 }
 
-.process-icon {
-    font-size: 43px;
-    margin-bottom: 8px;
+.process-step:hover{
+    transform:translateY(-7px);
+    box-shadow:0 8px 20px rgba(98,30,55,.15);
 }
 
-.process-step h3 {
-    font-size: 17px;
+.process-icon{
+    font-size:43px;
+    margin-bottom:8px;
 }
 
-.process-step p {
-    font-size: 14px;
+.process-step h3{
+    font-size:17px;
 }
 
-
-/* =========================================
-   HERITAGE
-========================================= */
-
-.heritage-box {
-    background:
-    linear-gradient(
-        135deg,
-        #fff9e9,
-        #f7e8c5
-    );
-
-    padding: 25px;
-
-    border-radius: 18px;
-
-    border-left: 5px solid #7c2345;
+.process-step p{
+    font-size:14px;
 }
 
-.heritage-box p {
-    margin-bottom: 13px;
+/* HERITAGE */
+
+.heritage-box{
+    background:linear-gradient(135deg,#fff9e9,#f7e8c5);
+    padding:25px;
+    border-radius:18px;
+    border-left:5px solid #7c2345;
 }
 
-
-/* =========================================
-   WEAVER PROFILE
-========================================= */
-
-.profile {
-    display: grid;
-
-    grid-template-columns:
-    260px 1fr;
-
-    gap: 30px;
-
-    align-items: center;
+.heritage-box p{
+    margin-bottom:13px;
 }
 
-.profile-image {
-    text-align: center;
+/* PROFILE */
+
+.profile{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:30px;
+    align-items:center;
 }
 
-.profile-image img {
-    width: 220px;
-    height: 220px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 6px solid #c99b3e;
-
-    box-shadow:
-    0 8px 20px rgba(0,0,0,0.15);
+.profile-image{
+    text-align:center;
 }
 
-.profile-details p {
-    padding: 8px;
-
-    border-bottom:
-    1px solid #ead8ad;
+.profile-image img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #c99b3e;
 }
 
-.weaver-thought {
-    margin-top: 20px;
-
-    background:
-    #fff7e6;
-
-    padding: 20px;
-
-    border-radius: 15px;
-
-    border:
-    1px dashed #bc8c32;
+.profile-details p{
+    padding:8px;
+    border-bottom:1px solid #ead8ad;
 }
 
-
-/* =========================================
-   PRODUCT SPECIFICATIONS
-========================================= */
-
-.specification {
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
-
-    gap: 15px;
+.weaver-thought{
+    margin-top:20px;
+    background:#fff7e6;
+    padding:20px;
+    border-radius:15px;
+    border:1px dashed #bc8c32;
 }
 
-.spec-item {
-    background:
-    #fff9ed;
+/* SPECIFICATIONS */
 
-    padding: 16px;
-
-    border-radius: 15px;
-
-    border-left:
-    5px solid #c39231;
+.specification{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
 }
 
-.spec-item b {
-    color: #681b3e;
+.spec-item{
+    background:#fff9ed;
+    padding:16px;
+    border-radius:15px;
+    border-left:5px solid #c39231;
 }
 
-
-/* =========================================
-   GALLERY
-========================================= */
-
-.gallery {
-    display: grid;
-
-    grid-template-columns:
-    repeat(2, 1fr);
-
-    gap: 25px;
+.spec-item b{
+    color:#681b3e;
 }
 
-.gallery-item {
-    text-align: center;
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-.gallery img {
-    width: 100%;
-    height: 380px;
-
-    object-fit: cover;
-
-    border-radius: 20px;
-
-    border: 4px solid #e0c37d;
-
-    box-shadow:
-    0 6px 18px rgba(0,0,0,0.14);
+.gallery-item{
+    text-align:center;
 }
 
-.caption {
-    margin-top: 10px;
-
-    color: #6a1f40;
-
-    font-style: italic;
+.gallery img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid #e0c37d;
 }
 
-
-/* =========================================
-   VIDEOS
-========================================= */
-
-.video-grid {
-    display: grid;
-
-    grid-template-columns:
-    repeat(2, 1fr);
-
-    gap: 25px;
+.caption{
+    margin-top:10px;
+    color:#6a1f40;
+    font-style:italic;
 }
 
-.video-item {
-    text-align: center;
+/* VIDEO */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-.video-grid video {
-    width: 100%;
-
-    border-radius: 18px;
-
-    background: black;
-
-    border: 3px solid #c89b3c;
+.video-item{
+    text-align:center;
 }
 
-
-/* =========================================
-   TIME SECTION
-========================================= */
-
-.time-box {
-    text-align: center;
-
-    margin: 32px 0;
-
-    padding: 40px 25px;
-
-    border-radius: 25px;
-
-    color: white;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #681b3e,
-        #9c4a69,
-        #681b3e
-    );
-
-    box-shadow:
-    0 10px 25px rgba(83,20,48,0.25);
+.video-grid video{
+    width:100%;
+    border-radius:18px;
+    background:black;
+    border:3px solid #c89b3c;
 }
 
-.time-box h2 {
-    color: #ffe19a;
+/* TIME */
+
+.time-box{
+    text-align:center;
+    margin:32px 0;
+    padding:40px 25px;
+    border-radius:25px;
+    color:white;
+    background:linear-gradient(135deg,#681b3e,#9c4a69,#681b3e);
 }
 
-.time-icon {
-    font-size: 60px;
-    margin-bottom: 10px;
+.time-box h2{
+    color:#ffe19a;
 }
 
-
-/* =========================================
-   QR SECTION
-========================================= */
-
-.qr-box {
-    text-align: center;
-
-    padding: 30px;
-
-    background:
-    rgba(255,250,240,0.8);
-
-    border:
-    2px dashed #bf9135;
-
-    border-radius: 20px;
+.time-icon{
+    font-size:60px;
 }
 
-.qr-box img {
-    width: 230px;
-    max-width: 90%;
+/* QR */
 
-    margin: 20px auto;
-
-    display: block;
-
-    padding: 10px;
-
-    background: white;
-
-    border-radius: 15px;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.15);
+.qr-box{
+    text-align:center;
+    padding:30px;
+    background:rgba(255,250,240,.8);
+    border:2px dashed #bf9135;
+    border-radius:20px;
 }
 
-
-/* =========================================
-   CERTIFICATE
-========================================= */
-
-.documents {
-    display: grid;
-
-    grid-template-columns:
-    repeat(2, 1fr);
-
-    gap: 25px;
+.qr-box img{
+    width:230px;
+    max-width:90%;
+    margin:20px auto;
+    display:block;
+    padding:10px;
+    background:white;
+    border-radius:15px;
 }
 
-.document-item {
-    text-align: center;
+/* DOCUMENTS */
 
-    background:
-    rgba(255,249,235,0.75);
-
-    padding: 18px;
-
-    border-radius: 18px;
+.documents{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-.document-item img {
-    width: 100%;
-
-    border-radius: 15px;
-
-    border: 3px solid #c99b3e;
+.document-item{
+    text-align:center;
+    background:rgba(255,249,235,.75);
+    padding:18px;
+    border-radius:18px;
 }
 
-
-/* =========================================
-   CONTACT
-========================================= */
-
-.contact-box {
-    text-align: center;
+.document-item img{
+    width:100%;
+    border-radius:15px;
+    border:3px solid #c99b3e;
 }
 
-.contact-btn {
-    display: inline-block;
+/* CONTACT */
 
-    margin: 10px;
-
-    padding: 14px 25px;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 30px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+.contact-box{
+    text-align:center;
 }
 
-.instagram {
-    background:
-    linear-gradient(
-        135deg,
-        #833ab4,
-        #fd1d1d,
-        #fcb045
-    );
+.contact-btn{
+    display:inline-block;
+    margin:10px;
+    padding:14px 25px;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.whatsapp {
-    background: #258a4c;
+.instagram{
+    background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
 }
 
-.contact-btn:hover {
-    transform: translateY(-4px);
+.whatsapp{
+    background:#258a4c;
 }
 
-
-/* =========================================
-   PRESENTERS
-========================================= */
-
-.presenter-box {
-    text-align: center;
-
-    background:
-    #fff7e7;
-
-    padding: 25px;
-
-    border-radius: 18px;
+.contact-btn:hover{
+    transform:translateY(-4px);
 }
 
-.presenter-box p {
-    margin: 12px;
+/* PRESENTERS */
+
+.presenter-box{
+    text-align:center;
+    background:#fff7e7;
+    padding:25px;
+    border-radius:18px;
 }
 
-
-/* =========================================
-   MOTIVE
-========================================= */
-
-.motive {
-    text-align: center;
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #fff6df,
-        #f5e1b7
-    );
+.presenter-box p{
+    margin:12px;
 }
 
+/* MOTIVE */
 
-/* =========================================
-   THANK YOU
-========================================= */
-
-.thank-you {
-    text-align: center;
-
-    padding: 55px 25px;
-
-    margin-top: 35px;
-
-    border-radius: 30px;
-
-    color: white;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #65183a,
-        #3e1227
-    );
+.motive{
+    text-align:center;
+    padding:30px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#fff6df,#f5e1b7);
 }
 
-.thank-you h2 {
-    color: #ffe198;
-    font-size: 40px;
+/* THANK YOU */
+
+.thank-you{
+    text-align:center;
+    padding:55px 25px;
+    margin-top:35px;
+    border-radius:30px;
+    color:white;
+    background:linear-gradient(135deg,#65183a,#3e1227);
 }
 
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    margin-top: 30px;
-
-    background: #53132f;
-
-    color: #fff2d5;
-
-    text-align: center;
-
-    padding: 30px;
-
-    border-top:
-    4px solid #c99938;
+.thank-you h2{
+    color:#ffe198;
+    font-size:40px;
 }
 
+/* FOOTER */
 
-/* =========================================
-   MOBILE DESIGN
-========================================= */
+footer{
+    margin-top:30px;
+    background:#53132f;
+    color:#fff2d5;
+    text-align:center;
+    padding:30px;
+    border-top:4px solid #c99938;
+}
 
-@media(max-width: 800px) {
+@media(max-width:800px){
 
-    .side-border {
-        width: 16px;
+    .side-border{
+        width:16px;
     }
 
-    .website {
-        padding: 0 22px;
+    .website{
+        padding:0 22px;
     }
 
-    .flower-decoration {
-        display: none;
+    .flower-decoration{
+        display:none;
     }
 
     .header-peacock-left,
-    .header-peacock-right {
-        font-size: 70px;
-        opacity: 0.12;
+    .header-peacock-right{
+        font-size:70px;
+        opacity:.12;
     }
 
-    .logo {
-        font-size: 40px;
+    .logo{
+        font-size:40px;
     }
 
-    .tagline {
-        font-size: 17px;
+    .tagline{
+        font-size:17px;
     }
 
-    .intro {
-        font-size: 15px;
+    .intro{
+        font-size:15px;
     }
 
-    .card {
-        padding: 25px 18px;
+    .card{
+        padding:25px 18px;
     }
 
-    h2 {
-        font-size: 25px;
+    h2{
+        font-size:25px;
     }
 
-    .profile {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .profile{
+        grid-template-columns:1fr;
+        text-align:center;
     }
 
-    .gallery {
-        grid-template-columns: 1fr;
+    .gallery,
+    .video-grid,
+    .documents{
+        grid-template-columns:1fr;
     }
 
-    .gallery img {
-        height: auto;
+    .gallery img{
+        height:auto;
     }
-
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .documents {
-        grid-template-columns: 1fr;
-    }
-
 }
-
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- PAITHANI SIDE BORDERS -->
 
 <div class="side-border left-border"></div>
 <div class="side-border right-border"></div>
 
-
-<!-- FLOWER DECORATIONS -->
-
-<div class="flower-decoration flower1">
-🌸🦚🌿
-</div>
-
-<div class="flower-decoration flower2">
-🌺🌿🪷
-</div>
-
-<div class="flower-decoration flower3">
-🦚🌸🌿
-</div>
-
-<div class="flower-decoration flower4">
-🪷🌺🌿
-</div>
-
+<div class="flower-decoration flower1">🌸🦚🌿</div>
+<div class="flower-decoration flower2">🌺🌿🪷</div>
+<div class="flower-decoration flower3">🦚🌸🌿</div>
+<div class="flower-decoration flower4">🪷🌺🌿</div>
 
 <div class="website">
 
-
-<!-- =====================================
-HEADER
-===================================== -->
-
 <header>
 
-<div class="header-peacock-left">
-🦚
-</div>
+<div class="header-peacock-left">🦚</div>
+<div class="header-peacock-right">🦚</div>
 
-<div class="header-peacock-right">
-🦚
-</div>
+<h1 class="logo">🦚 Weave Gatha</h1>
 
-
-<h1 class="logo">
-🦚 Weave Gatha
-</h1>
-
-
-<p class="tagline">
+<p id="tagline" class="tagline">
 Every Paithani Has a Story
 </p>
 
-
 <div class="header-line"></div>
 
-
-<p class="intro">
-
-Weave Gatha is a project dedicated to the skilled artisans
-behind Paithani and the rich cultural heritage of Maharashtra.
-Our mission is to recognise the hard work of artisans, preserve
-this precious heritage and carry the traditional art of Paithani
-forward to future generations.
-
+<p id="intro" class="intro">
+Weave Gatha is a project dedicated to the skilled artisans behind Paithani and the rich cultural heritage of Maharashtra.
 </p>
-
 
 <div class="language-box">
 
-<button class="lang-btn">
+<button class="lang-btn active" onclick="changeLanguage('en',this)">
 English
 </button>
 
-<button class="lang-btn">
+<button class="lang-btn" onclick="changeLanguage('mr',this)">
 मराठी
 </button>
 
 </div>
 
-
 <nav>
 
-<a href="#journey">Journey</a>
-
-<a href="#heritage">Heritage</a>
-
-<a href="#weaver">Weaver</a>
-
-<a href="#product">Product</a>
-
-<a href="#contact">Contact</a>
+<a id="navJourney" href="#journey">Journey</a>
+<a id="navHeritage" href="#heritage">Heritage</a>
+<a id="navWeaver" href="#weaver">Weaver</a>
+<a id="navProduct" href="#product">Product</a>
+<a id="navContact" href="#contact">Contact</a>
 
 </nav>
-
 
 </header>
 
 
-
-<!-- =====================================
-PAITHANI JOURNEY
-===================================== -->
+<!-- JOURNEY -->
 
 <section class="card" id="journey">
 
-<h2>
-🧵 The Journey of Paithani
-</h2>
+<h2 id="journeyTitle">🧵 The Journey of Paithani</h2>
 
 <div class="section-line"></div>
 
-
-<p style="text-align:center;">
-
-From selecting the finest silk to reaching the customer,
-every Paithani goes through a beautiful journey filled
-with skill, patience and dedication.
-
+<p id="journeyIntro" style="text-align:center;">
+From selecting the finest silk to reaching the customer, every Paithani goes through a beautiful journey filled with skill, patience and dedication.
 </p>
-
 
 <div class="process-grid">
 
+<div class="process-step">
+<div class="process-icon">🧶</div>
+<h3 id="step1Title">1. Silk Selection</h3>
+<p id="step1Text">Fine-quality Mulberry Silk is carefully selected.</p>
+</div>
 
 <div class="process-step">
-
-<div class="process-icon">
-🧶
+<div class="process-icon">🎨</div>
+<h3 id="step2Title">2. Colouring</h3>
+<p id="step2Text">The silk threads are beautifully coloured.</p>
 </div>
-
-<h3>1. Silk Selection</h3>
-
-<p>
-Fine-quality Mulberry Silk is carefully selected.
-</p>
-
-</div>
-
-
 
 <div class="process-step">
-
-<div class="process-icon">
-🎨
+<div class="process-icon">✨</div>
+<h3 id="step3Title">3. Zari Preparation</h3>
+<p id="step3Text">Golden and silver zari is prepared.</p>
 </div>
-
-<h3>2. Colouring</h3>
-
-<p>
-The silk threads are beautifully coloured.
-</p>
-
-</div>
-
-
 
 <div class="process-step">
-
-<div class="process-icon">
-✨
+<div class="process-icon">🧵</div>
+<h3 id="step4Title">4. Hand Weaving</h3>
+<p id="step4Text">Skilled artisans carefully weave every motif.</p>
 </div>
-
-<h3>3. Zari Preparation</h3>
-
-<p>
-Golden and silver zari is prepared.
-</p>
-
-</div>
-
-
 
 <div class="process-step">
-
-<div class="process-icon">
-🧵
+<div class="process-icon">🦚</div>
+<h3 id="step5Title">5. Paithani Ready</h3>
+<p id="step5Text">A beautiful traditional masterpiece is created.</p>
 </div>
-
-<h3>4. Hand Weaving</h3>
-
-<p>
-Skilled artisans carefully weave every motif.
-</p>
-
-</div>
-
-
 
 <div class="process-step">
-
-<div class="process-icon">
-🦚
+<div class="process-icon">🛍️</div>
+<h3 id="step6Title">6. Market</h3>
+<p id="step6Text">The Paithani finally reaches its customer.</p>
 </div>
 
-<h3>5. Paithani Ready</h3>
-
-<p>
-A beautiful traditional masterpiece is created.
-</p>
-
 </div>
-
-
-
-<div class="process-step">
-
-<div class="process-icon">
-🛍️
-</div>
-
-<h3>6. Market</h3>
-
-<p>
-The Paithani finally reaches its customer.
-</p>
-
-</div>
-
-
-</div>
-
 </section>
 
 
-
-<!-- =====================================
-HERITAGE
-===================================== -->
+<!-- HERITAGE -->
 
 <section class="card" id="heritage">
 
-<h2>
-🏛️ Heritage of Paithani
-</h2>
+<h2 id="heritageTitle">🏛️ Heritage of Paithani</h2>
 
 <div class="section-line"></div>
-
 
 <div class="heritage-box">
 
-<p>
-🌸 Paithani is one of the most precious traditional
-handloom arts of Maharashtra.
-</p>
-
-<p>
-🌸 Its history can be traced back nearly 2000 years
-to the period of the Satavahana rulers.
-</p>
-
-<p>
-🌸 The art of Paithani is traditionally associated
-with the historic city of Paithan.
-</p>
-
-<p>
-🌸 Over centuries, Paithani became a symbol of royal
-elegance, patience and skilled craftsmanship.
-</p>
-
-<p>
-🌸 Today, Yeola is one of the major centres of
-Paithani production, where this business is carried
-out on a large scale.
-</p>
-
-<p>
-🌸 Every Paithani is therefore not just a saree but
-a living story of Maharashtra's cultural heritage.
-</p>
+<p id="heritage1">🌸 Paithani is one of the most precious traditional handloom arts of Maharashtra.</p>
+<p id="heritage2">🌸 Its history can be traced back nearly 2000 years to the period of the Satavahana rulers.</p>
+<p id="heritage3">🌸 The art of Paithani is traditionally associated with the historic city of Paithan.</p>
+<p id="heritage4">🌸 Over centuries, Paithani became a symbol of royal elegance, patience and skilled craftsmanship.</p>
+<p id="heritage5">🌸 Today, Yeola is one of the major centres of Paithani production.</p>
+<p id="heritage6">🌸 Every Paithani is therefore a living story of Maharashtra's cultural heritage.</p>
 
 </div>
-
 </section>
 
 
-
-<!-- =====================================
-WEAVER PROFILE
-===================================== -->
+<!-- WEAVER PROFILE -->
 
 <section class="card" id="weaver">
 
-<h2>
-👨‍🎨 Weaver's Profile
-</h2>
+<h2 id="weaverTitle">👨‍🎨 Weaver's Profile</h2>
 
 <div class="section-line"></div>
-
 
 <div class="profile">
 
-
 <div class="profile-image">
-
-<!-- ADD WEAVER PHOTO -->
-
-<img
-src="weaver.jpg"
-alt="Paithani Weaver">
-
+<img src="weaver.jpg" alt="Paithani Weaver">
 </div>
-
-
 
 <div class="profile-details">
 
-<p>
-<b>🌸 Name:</b>
-Add Weaver Name
-</p>
-
-<p>
-<b>📱 Mobile Number:</b>
-Add Mobile Number
-</p>
-
-<p>
-<b>📍 Address:</b>
-Add Address
-</p>
-
-<p>
-<b>🧵 Experience:</b>
-Add Experience
-</p>
-
-<p>
-<b>🏠 Place of Production:</b>
-Add Production Location
-</p>
-
+<p><b id="nameLabel">🌸 Name:</b> Add Weaver Name</p>
+<p><b id="mobileLabel">📱 Mobile Number:</b> Add Mobile Number</p>
+<p><b id="addressLabel">📍 Address:</b> Add Address</p>
+<p><b id="experienceLabel">🧵 Experience:</b> Add Experience</p>
+<p><b id="productionLabel">🏠 Place of Production:</b> Add Production Location</p>
 
 <div class="weaver-thought">
 
-<h3>
-💬 Weaver's Thoughts
-</h3>
+<h3 id="thoughtTitle">💬 Weaver's Thoughts</h3>
 
-<p>
-
-This website helps people understand the hard work,
-patience and skill behind every Paithani. Through
-Weave Gatha, customers can discover the story of
-their Paithani and connect with the artisan behind it.
-
+<p id="thoughtText">
+This website helps people understand the hard work, patience and skill behind every Paithani. Through Weave Gatha, customers can discover the story of their Paithani and connect with the artisan behind it.
 </p>
 
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-
-<!-- =====================================
-PRODUCT SPECIFICATION
-===================================== -->
+<!-- PRODUCT -->
 
 <section class="card" id="product">
 
-<h2>
-✨ Product Specification
-</h2>
+<h2 id="productTitle">✨ Product Specification</h2>
 
 <div class="section-line"></div>
-
 
 <div class="specification">
 
+<div class="spec-item"><b id="spec1">🌸 Paithani Name:</b><br><span id="spec1Value">Add Paithani Name</span></div>
 
-<div class="spec-item">
+<div class="spec-item"><b id="spec2">🪪 Paithani ID:</b><br>P001</div>
 
-<b>🌸 Paithani Name:</b>
+<div class="spec-item"><b id="spec3">🧶 Silk Type:</b><br>Mulberry Silk</div>
 
-<br>
+<div class="spec-item"><b id="spec4">✨ Zari Type:</b><br>Golden Silver Tested</div>
 
-Add Paithani Name
+<div class="spec-item"><b id="spec5">🏅 Purity:</b><br>100% Pure</div>
 
-</div>
+<div class="spec-item"><b id="spec6">🪙 Butti:</b><br>Coin Butti</div>
 
+<div class="spec-item"><b id="spec7">🦚 Border Motifs:</b><br>Kamal Vel, Popat (Parrot), Peacock</div>
 
-<div class="spec-item">
+<div class="spec-item"><b id="spec8">🪷 Padar:</b><br>Pair of Peacock and Lotus</div>
 
-<b>🪪 Paithani ID:</b>
-
-<br>
-
-P001
+<div class="spec-item"><b id="spec9">🌼 Colour:</b><br>Aboli and Golden<br>(Natural Colours)</div>
 
 </div>
-
-
-<div class="spec-item">
-
-<b>🧶 Silk Type:</b>
-
-<br>
-
-Mulberry Silk
-
-</div>
-
-
-<div class="spec-item">
-
-<b>✨ Zari Type:</b>
-
-<br>
-
-Golden Silver Tested
-
-</div>
-
-
-<div class="spec-item">
-
-<b>🏅 Purity:</b>
-
-<br>
-
-100% Pure
-
-</div>
-
-
-<div class="spec-item">
-
-<b>🪙 Butti:</b>
-
-<br>
-
-Coin Butti
-
-</div>
-
-
-<div class="spec-item">
-
-<b>🦚 Border Motifs:</b>
-
-<br>
-
-Kamal Vel, Popat (Parrot), Peacock
-
-</div>
-
-
-<div class="spec-item">
-
-<b>🪷 Padar:</b>
-
-<br>
-
-Pair of Peacock and Lotus
-
-</div>
-
-
-<div class="spec-item">
-
-<b>🌼 Colour:</b>
-
-<br>
-
-Aboli and Golden
-
-<br>
-
-(Natural Colours)
-
-</div>
-
-
-</div>
-
 </section>
 
 
-
-<!-- =====================================
-PAITHANI GALLERY
-===================================== -->
+<!-- GALLERY -->
 
 <section class="card">
 
-<h2>
-📸 The Beauty of Paithani
-</h2>
+<h2 id="galleryTitle">📸 The Beauty of Paithani</h2>
 
 <div class="section-line"></div>
 
-
-<p style="text-align:center;">
-
-Every colour, motif and thread reflects the
-patience and creativity of the artisan who created it.
-
+<p id="galleryIntro" style="text-align:center;">
+Every colour, motif and thread reflects the patience and creativity of the artisan.
 </p>
-
 
 <div class="gallery">
 
+<div class="gallery-item">
+<img src="IMG-20260827-WA0005.jpg" alt="Paithani Saree">
+<p id="caption1" class="caption">🪷 A masterpiece woven with tradition and love.</p>
+</div>
 
 <div class="gallery-item">
-
-<img
-src="IMG-20260827-WA0005.jpg"
-alt="Paithani Saree">
-
-
-<p class="caption">
-
-🪷 A masterpiece woven with tradition and love.
-
-</p>
-
+<img src="IMG-20260827-WA0018.jpg" alt="Paithani Design">
+<p id="caption2" class="caption">🦚 Every motif tells a story of Maharashtra.</p>
 </div>
 
-
-
-<div class="gallery-item">
-
-<img
-src="IMG-20260827-WA0018.jpg"
-alt="Paithani Design">
-
-
-<p class="caption">
-
-🦚 Every motif tells a story of Maharashtra.
-
-</p>
-
 </div>
-
-
-</div>
-
 </section>
 
 
-
-<!-- =====================================
-VIDEOS
-===================================== -->
+<!-- VIDEOS -->
 
 <section class="card">
 
-<h2>
-🎥 The Art of Paithani
-</h2>
+<h2 id="videoTitle">🎥 The Art of Paithani</h2>
 
 <div class="section-line"></div>
 
-
-<p style="text-align:center;">
-
-Watch the journey of skilled artisans and discover
-how beautiful threads are transformed into Paithani.
-
+<p id="videoIntro" style="text-align:center;">
+Watch the journey of skilled artisans and discover how beautiful threads are transformed into Paithani.
 </p>
-
 
 <div class="video-grid">
 
-
 <div class="video-item">
-
 <video controls playsinline>
-
-<source
-src="VID-20260826-WA0002.mp4"
-type="video/mp4">
-
-Your browser does not support video.
-
+<source src="VID-20260826-WA0002.mp4" type="video/mp4">
 </video>
 
-
-<p class="caption">
-
+<p id="videoCaption1" class="caption">
 🧵 The hard work and dedication behind every weave.
-
 </p>
-
 </div>
-
-
 
 <div class="video-item">
-
 <video controls playsinline>
-
-<source
-src="VID-20260827-WA0014.mp4"
-type="video/mp4">
-
-Your browser does not support video.
-
+<source src="VID-20260827-WA0014.mp4" type="video/mp4">
 </video>
 
-
-<p class="caption">
-
+<p id="videoCaption2" class="caption">
 🦚 A beautiful journey from threads to Paithani.
-
 </p>
-
 </div>
 
-
 </div>
-
 </section>
 
 
-
-<!-- =====================================
-TIME & EFFORT
-===================================== -->
+<!-- TIME -->
 
 <section class="time-box">
 
-<div class="time-icon">
-⌛
-</div>
+<div class="time-icon">⌛</div>
 
-
-<h2>
-Time, Patience & Dedication
-</h2>
-
+<h2 id="timeTitle">Time, Patience & Dedication</h2>
 
 <div class="section-line"></div>
 
+<p id="time1">A Paithani is not created within just a few days.</p>
 
-<p>
-
-A Paithani is not created within just a few days.
-
+<p id="time2">
+Depending on its design and complexity, a Paithani may take approximately 25 days to 1 month to complete.
 </p>
 
-
-<p>
-
-Depending on its design, motifs and complexity,
-a Paithani may take approximately 25 days
-to 1 month to complete.
-
-</p>
-
-
-<p>
-
-Behind every saree are countless hours of hard work,
-patience, creativity and incredible skill.
-
+<p id="time3">
+Behind every saree are countless hours of hard work, patience, creativity and incredible skill.
 </p>
 
 </section>
 
 
-
-<!-- =====================================
-QR CODE
-===================================== -->
+<!-- QR -->
 
 <section class="card">
 
-<h2>
-📱 Scan & Discover
-</h2>
+<h2 id="qrTitle">📱 Scan & Discover</h2>
 
 <div class="section-line"></div>
-
 
 <div class="qr-box">
 
-
-<p>
-
-Scan the QR Code and discover the complete story
-behind your Paithani.
-
+<p id="qr1">
+Scan the QR Code and discover the complete story behind your Paithani.
 </p>
 
+<img src="Paithani_P001_QR-1.png" alt="Weave Gatha QR Code">
 
-<img
-src="Paithani_P001_QR-1.png"
-alt="Weave Gatha QR Code">
+<h3 id="qrHeading">📖 Your Paithani's Digital Story</h3>
 
+<p id="qr2">Every Paithani can have its own unique identity.</p>
 
-<h3>
-📖 Your Paithani's Digital Story
-</h3>
-
-
-<p>
-
-Every Paithani can have its own unique identity.
-
+<p id="qr3">
+Through this QR Code, customers can discover the artisan, product details, weaving process and heritage behind their Paithani.
 </p>
-
-
-<p>
-
-Through this QR Code, customers can discover
-the artisan, product details, weaving process
-and heritage behind their Paithani.
-
-</p>
-
 
 </div>
-
 </section>
 
 
-
-<!-- =====================================
-CERTIFICATE & THANK YOU CARD
-===================================== -->
-
-<section class="card">
-
-<h2>
-📜 A Paithani With Trust
-</h2>
-
-<div class="section-line"></div>
-
-
-<p style="text-align:center;">
-
-Every Paithani can be accompanied by an
-Authentication Certificate and a special Thank You Card.
-
-</p>
-
-
-<div class="documents">
-
-
-<div class="document-item">
-
-<img
-src="certificate.jpg"
-alt="Authentication Certificate">
-
-
-<h3>
-📜 Authentication Certificate
-</h3>
-
-
-<p>
-
-This certificate provides important information
-about the Paithani and helps customers understand
-its identity and authenticity.
-
-</p>
-
-</div>
-
-
-
-<div class="document-item">
-
-<img
-src="thankyou-card.jpg"
-alt="Thank You Card">
-
-
-<h3>
-❤️ Thank You Card
-</h3>
-
-
-<p>
-
-A special Thank You Card will be included
-with every Paithani to thank customers for
-supporting artisans and Maharashtra's heritage.
-
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================
-CONTACT
-===================================== -->
+<!-- CONTACT -->
 
 <section class="card contact-box" id="contact">
 
-<h2>
-📞 Connect With Us
-</h2>
+<h2 id="contactTitle">📞 Connect With Us</h2>
 
 <div class="section-line"></div>
 
-
-<p>
-
-Join us in the journey of celebrating,
-preserving and carrying forward
-the heritage of Paithani.
-
+<p id="contactIntro">
+Join us in the journey of celebrating, preserving and carrying forward the heritage of Paithani.
 </p>
 
-
-<!-- REPLACE YOUR INSTAGRAM LINK -->
-
-<a
-href="YOUR_INSTAGRAM_LINK"
-target="_blank"
-class="contact-btn instagram">
-
-📸 Follow Us on Instagram
-
+<a href="YOUR_INSTAGRAM_LINK" target="_blank" class="contact-btn instagram">
+📸 <span id="instagramText">Follow Us on Instagram</span>
 </a>
 
-
-
-<!-- REPLACE YOUR WHATSAPP NUMBER -->
-
-<a
-href="https://wa.me/91YOURNUMBER"
-target="_blank"
-class="contact-btn whatsapp">
-
-💬 Contact Us on WhatsApp
-
+<a href="https://wa.me/91YOURNUMBER" target="_blank" class="contact-btn whatsapp">
+💬 <span id="whatsappText">Contact Us on WhatsApp</span>
 </a>
-
 
 <p>
-
-<b>WhatsApp Number:</b>
-
+<b id="whatsappLabel">WhatsApp Number:</b>
 +91 YOUR NUMBER
-
 </p>
 
 </section>
 
 
-
-<!-- =====================================
-PROJECT PRESENTERS
-===================================== -->
+<!-- PRESENTERS -->
 
 <section class="card">
 
-<h2>
-👩‍💼 Project Presenters
-</h2>
+<h2 id="presenterTitle">👩‍💼 Project Presenters</h2>
 
 <div class="section-line"></div>
 
-
 <div class="presenter-box">
 
-<p>
-🌸 <b>Shreya Dhumne</b>
-</p>
+<p>🌸 <b>Shreya Dhumne</b></p>
+<p>🌸 <b>Samruddhi Bhandari</b></p>
 
 <p>
-🌸 <b>Samruddhi Bhandari</b>
-</p>
-
-<p>
-
-📧 <b>Email:</b>
-
+📧 <b id="emailLabel">Email:</b>
 weavegathaofficial.707@gmail.com
-
 </p>
 
 </div>
-
 </section>
 
 
-
-<!-- =====================================
-PROJECT MOTIVE
-===================================== -->
+<!-- MOTIVE -->
 
 <section class="card">
 
 <div class="motive">
 
-
-<h2>
-❤️ Motive of This Project
-</h2>
-
+<h2 id="motiveTitle">❤️ Motive of This Project</h2>
 
 <div class="section-line"></div>
 
-
-<p>
-
-The main motive of Weave Gatha is to preserve
-and promote the traditional art of Paithani.
-
+<p id="motive1">
+The main motive of Weave Gatha is to preserve and promote the traditional art of Paithani.
 </p>
 
-
-<p>
-
-We want to give recognition to the skilled artisans
-whose patience, creativity and dedication keep this
-beautiful tradition alive.
-
+<p id="motive2">
+We want to give recognition to the skilled artisans whose patience, creativity and dedication keep this beautiful tradition alive.
 </p>
 
-
-<p>
-
-This project helps people understand that Paithani
-is not just a saree but a story of culture,
-history and craftsmanship.
-
+<p id="motive3">
+This project helps people understand that Paithani is not just a saree but a story of culture, history and craftsmanship.
 </p>
 
-
-<p>
-
-Through QR technology, we aim to connect customers
-directly with the story and identity behind their Paithani.
-
+<p id="motive4">
+Through QR technology, we aim to connect customers directly with the story and identity behind their Paithani.
 </p>
 
-
-<p>
-
-Our vision is to protect Maharashtra's precious heritage
-and carry the beautiful tradition of Paithani
-forward to future generations.
-
+<p id="motive5">
+Our vision is to protect Maharashtra's precious heritage and carry the beautiful tradition of Paithani forward to future generations.
 </p>
-
 
 </div>
-
 </section>
 
 
-
-<!-- =====================================
-THANK YOU
-===================================== -->
+<!-- THANK YOU -->
 
 <section class="thank-you">
 
-
-<h2>
-🙏 Thank You 🙏
-</h2>
-
+<h2 id="thankTitle">🙏 Thank You 🙏</h2>
 
 <div class="section-line"></div>
 
-
-<p>
-
-Thank you for taking the time to discover
-the beautiful story behind Paithani.
-
+<p id="thank1">
+Thank you for taking the time to discover the beautiful story behind Paithani.
 </p>
 
-
-<p>
-
-Together, let us celebrate, preserve
-and carry forward the heritage of Maharashtra.
-
+<p id="thank2">
+Together, let us celebrate, preserve and carry forward the heritage of Maharashtra.
 </p>
 
-
-<p style="font-size:30px; margin-top:15px;">
-
+<p style="font-size:30px;margin-top:15px;">
 🦚 🪷 🌸 🪷 🦚
-
 </p>
-
 
 </section>
-
 
 </div>
 
 
-<!-- =====================================
-FOOTER
-===================================== -->
-
 <footer>
 
-<h3 style="color:#ffe19a;">
-🦚 Weave Gatha 🦚
-</h3>
+<h3 style="color:#ffe19a;">🦚 Weave Gatha 🦚</h3>
 
-<p>
+<p id="footer1">
 Discover • Connect • Preserve Heritage
 </p>
 
-<p>
-Dedicated to the Artisans of Paithani
-and the Culture of Maharashtra ❤️
+<p id="footer2">
+Dedicated to the Artisans of Paithani and the Culture of Maharashtra ❤️
 </p>
 
 </footer>
 
 
+<script>
+
+const translations = {
+
+en: {
+
+tagline:"Every Paithani Has a Story",
+
+intro:"Weave Gatha is a project dedicated to the skilled artisans behind Paithani and the rich cultural heritage of Maharashtra. Our mission is to recognise the hard work of artisans, preserve this precious heritage and carry the traditional art of Paithani forward to future generations.",
+
+navJourney:"Journey",
+navHeritage:"Heritage",
+navWeaver:"Weaver",
+navProduct:"Product",
+navContact:"Contact",
+
+journeyTitle:"🧵 The Journey of Paithani",
+
+journeyIntro:"From selecting the finest silk to reaching the customer, every Paithani goes through a beautiful journey filled with skill, patience and dedication.",
+
+step1Title:"1. Silk Selection",
+step1Text:"Fine-quality Mulberry Silk is carefully selected.",
+
+step2Title:"2. Colouring",
+step2Text:"The silk threads are beautifully coloured.",
+
+step3Title:"3. Zari Preparation",
+step3Text:"Golden and silver zari is prepared.",
+
+step4Title:"4. Hand Weaving",
+step4Text:"Skilled artisans carefully weave every motif.",
+
+step5Title:"5. Paithani Ready",
+step5Text:"A beautiful traditional masterpiece is created.",
+
+step6Title:"6. Market",
+step6Text:"The Paithani finally reaches its customer.",
+
+heritageTitle:"🏛️ Heritage of Paithani",
+
+heritage1:"🌸 Paithani is one of the most precious traditional handloom arts of Maharashtra.",
+heritage2:"🌸 Its history can be traced back nearly 2000 years to the period of the Satavahana rulers.",
+heritage3:"🌸 The art of Paithani is traditionally associated with the historic city of Paithan.",
+heritage4:"🌸 Over centuries, Paithani became a symbol of royal elegance, patience and skilled craftsmanship.",
+heritage5:"🌸 Today, Yeola is one of the major centres of Paithani production.",
+heritage6:"🌸 Every Paithani is therefore a living story of Maharashtra's cultural heritage.",
+
+weaverTitle:"👨‍🎨 Weaver's Profile",
+
+nameLabel:"🌸 Name:",
+mobileLabel:"📱 Mobile Number:",
+addressLabel:"📍 Address:",
+experienceLabel:"🧵 Experience:",
+productionLabel:"🏠 Place of Production:",
+
+thoughtTitle:"💬 Weaver's Thoughts",
+
+thoughtText:"This website helps people understand the hard work, patience and skill behind every Paithani. Through Weave Gatha, customers can discover the story of their Paithani and connect with the artisan behind it.",
+
+productTitle:"✨ Product Specification",
+
+galleryTitle:"📸 The Beauty of Paithani",
+
+galleryIntro:"Every colour, motif and thread reflects the patience and creativity of the artisan.",
+
+caption1:"🪷 A masterpiece woven with tradition and love.",
+caption2:"🦚 Every motif tells a story of Maharashtra.",
+
+videoTitle:"🎥 The Art of Paithani",
+
+videoIntro:"Watch the journey of skilled artisans and discover how beautiful threads are transformed into Paithani.",
+
+videoCaption1:"🧵 The hard work and dedication behind every weave.",
+videoCaption2:"🦚 A beautiful journey from threads to Paithani.",
+
+timeTitle:"Time, Patience & Dedication",
+
+time1:"A Paithani is not created within just a few days.",
+time2:"Depending on its design and complexity, a Paithani may take approximately 25 days to 1 month to complete.",
+time3:"Behind every saree are countless hours of hard work, patience, creativity and incredible skill.",
+
+qrTitle:"📱 Scan & Discover",
+qr1:"Scan the QR Code and discover the complete story behind your Paithani.",
+qrHeading:"📖 Your Paithani's Digital Story",
+qr2:"Every Paithani can have its own unique identity.",
+qr3:"Through this QR Code, customers can discover the artisan, product details, weaving process and heritage behind their Paithani.",
+
+contactTitle:"📞 Connect With Us",
+contactIntro:"Join us in the journey of celebrating, preserving and carrying forward the heritage of Paithani.",
+instagramText:"Follow Us on Instagram",
+whatsappText:"Contact Us on WhatsApp",
+whatsappLabel:"WhatsApp Number:",
+
+presenterTitle:"👩‍💼 Project Presenters",
+emailLabel:"Email:",
+
+motiveTitle:"❤️ Motive of This Project",
+
+motive1:"The main motive of Weave Gatha is to preserve and promote the traditional art of Paithani.",
+motive2:"We want to give recognition to the skilled artisans whose patience, creativity and dedication keep this beautiful tradition alive.",
+motive3:"This project helps people understand that Paithani is not just a saree but a story of culture, history and craftsmanship.",
+motive4:"Through QR technology, we aim to connect customers directly with the story and identity behind their Paithani.",
+motive5:"Our vision is to protect Maharashtra's precious heritage and carry the beautiful tradition of Paithani forward to future generations.",
+
+thankTitle:"🙏 Thank You 🙏",
+thank1:"Thank you for taking the time to discover the beautiful story behind Paithani.",
+thank2:"Together, let us celebrate, preserve and carry forward the heritage of Maharashtra.",
+
+footer1:"Discover • Connect • Preserve Heritage",
+footer2:"Dedicated to the Artisans of Paithani and the Culture of Maharashtra ❤️"
+
+},
+
+
+mr: {
+
+tagline:"प्रत्येक पैठणीमागे एक सुंदर कथा आहे",
+
+intro:"वीव्ह गाथा हा प्रकल्प पैठणी विणणाऱ्या कुशल कारागिरांना आणि महाराष्ट्राच्या समृद्ध सांस्कृतिक वारशाला समर्पित आहे. कारागिरांच्या मेहनतीला ओळख मिळावी, पैठणीची परंपरा जपली जावी आणि हा अमूल्य वारसा पुढील पिढीपर्यंत पोहोचावा हा या प्रकल्पाचा उद्देश आहे.",
+
+navJourney:"प्रवास",
+navHeritage:"वारसा",
+navWeaver:"कारागीर",
+navProduct:"उत्पादन",
+navContact:"संपर्क",
+
+journeyTitle:"🧵 पैठणीचा प्रवास",
+
+journeyIntro:"उत्तम रेशीम निवडण्यापासून ते ग्राहकांपर्यंत पोहोचेपर्यंत प्रत्येक पैठणीचा प्रवास कौशल्य, संयम आणि मेहनतीने भरलेला असतो.",
+
+step1Title:"१. रेशीम निवड",
+step1Text:"उत्तम दर्जाचे मलबरी रेशीम काळजीपूर्वक निवडले जाते.",
+
+step2Title:"२. रंगकाम",
+step2Text:"रेशमी धाग्यांना सुंदर आणि आकर्षक रंग दिले जातात.",
+
+step3Title:"३. जरीची तयारी",
+step3Text:"सोनेरी आणि चांदीच्या जरीची तयारी केली जाते.",
+
+step4Title:"४. हातमागावर विणकाम",
+step4Text:"कुशल कारागीर प्रत्येक नक्षी काळजीपूर्वक विणतात.",
+
+step5Title:"५. पैठणी तयार",
+step5Text:"पारंपरिक कलेचा एक सुंदर नमुना तयार होतो.",
+
+step6Title:"६. बाजारपेठ",
+step6Text:"तयार पैठणी शेवटी ग्राहकांपर्यंत पोहोचते.",
+
+heritageTitle:"🏛️ पैठणीचा सांस्कृतिक वारसा",
+
+heritage1:"🌸 पैठणी ही महाराष्ट्रातील सर्वात मौल्यवान पारंपरिक हातमाग कलेपैकी एक आहे.",
+heritage2:"🌸 पैठणीचा इतिहास सुमारे २००० वर्षांपूर्वी सातवाहन राजांच्या काळापर्यंत जातो.",
+heritage3:"🌸 पैठणी ही कला ऐतिहासिक पैठण शहराशी जोडलेली आहे.",
+heritage4:"🌸 अनेक शतकांपासून पैठणी राजेशाही सौंदर्य, संयम आणि कुशल कारागिरीचे प्रतीक बनली आहे.",
+heritage5:"🌸 आज येवला हे पैठणी उत्पादनाचे एक प्रमुख केंद्र आहे.",
+heritage6:"🌸 त्यामुळे प्रत्येक पैठणी ही महाराष्ट्राच्या सांस्कृतिक वारशाची जिवंत कथा आहे.",
+
+weaverTitle:"👨‍🎨 कारागिराची माहिती",
+
+nameLabel:"🌸 नाव:",
+mobileLabel:"📱 मोबाईल क्रमांक:",
+addressLabel:"📍 पत्ता:",
+experienceLabel:"🧵 अनुभव:",
+productionLabel:"🏠 उत्पादनाचे ठिकाण:",
+
+thoughtTitle:"💬 कारागिराचे मनोगत",
+
+thoughtText:"ही वेबसाइट लोकांना प्रत्येक पैठणीमागील मेहनत, संयम आणि कौशल्य समजून घेण्यास मदत करते. वीव्ह गाथाच्या माध्यमातून ग्राहक आपल्या पैठणीची कथा जाणून घेऊ शकतात आणि ती तयार करणाऱ्या कारागिराशी जोडले जाऊ शकतात.",
+
+productTitle:"✨ उत्पादनाची माहिती",
+
+galleryTitle:"📸 पैठणीचे सौंदर्य",
+
+galleryIntro:"प्रत्येक रंग, नक्षी आणि धाग्यामध्ये कारागिराचा संयम आणि सर्जनशीलता दिसून येते.",
+
+caption1:"🪷 परंपरा आणि प्रेमाने विणलेली एक सुंदर कलाकृती.",
+caption2:"🦚 प्रत्येक नक्षी महाराष्ट्राची एक सुंदर कथा सांगते.",
+
+videoTitle:"🎥 पैठणीची कला",
+
+videoIntro:"कुशल कारागिरांचा प्रवास पहा आणि सुंदर धाग्यांचे पैठणीत कसे रूपांतर होते ते जाणून घ्या.",
+
+videoCaption1:"🧵 प्रत्येक विणकामामागील मेहनत आणि समर्पण.",
+videoCaption2:"🦚 धाग्यांपासून सुंदर पैठणीपर्यंतचा प्रवास.",
+
+timeTitle:"वेळ, संयम आणि मेहनत",
+
+time1:"पैठणी काही दिवसांमध्ये तयार होत नाही.",
+
+time2:"तिची रचना आणि नक्षीच्या जटिलतेनुसार एक पैठणी तयार होण्यासाठी साधारण २५ दिवस ते १ महिना लागू शकतो.",
+
+time3:"प्रत्येक पैठणीमागे अनेक तासांची मेहनत, संयम, सर्जनशीलता आणि अद्भुत कौशल्य असते.",
+
+qrTitle:"📱 स्कॅन करा आणि जाणून घ्या",
+
+qr1:"QR कोड स्कॅन करून आपल्या पैठणीमागील संपूर्ण कथा जाणून घ्या.",
+
+qrHeading:"📖 आपल्या पैठणीची डिजिटल कथा",
+
+qr2:"प्रत्येक पैठणीची स्वतःची एक वेगळी ओळख असू शकते.",
+
+qr3:"या QR कोडद्वारे ग्राहक कारागिराची माहिती, उत्पादनाची माहिती, विणकामाची प्रक्रिया आणि पैठणीचा वारसा जाणून घेऊ शकतात.",
+
+contactTitle:"📞 आमच्याशी संपर्क साधा",
+
+contactIntro:"पैठणीचा वारसा साजरा करण्याच्या, जपण्याच्या आणि पुढे घेऊन जाण्याच्या या प्रवासात आमच्यासोबत सहभागी व्हा.",
+
+instagramText:"Instagram वर आम्हाला Follow करा",
+
+whatsappText:"WhatsApp वर संपर्क करा",
+
+whatsappLabel:"WhatsApp क्रमांक:",
+
+presenterTitle:"👩‍💼 प्रकल्प सादरकर्त्या",
+
+emailLabel:"ईमेल:",
+
+motiveTitle:"❤️ या प्रकल्पाचा उद्देश",
+
+motive1:"वीव्ह गाथाचा मुख्य उद्देश पैठणीची पारंपरिक कला जपणे आणि तिचा प्रसार करणे हा आहे.",
+
+motive2:"या सुंदर परंपरेला जिवंत ठेवणाऱ्या कुशल कारागिरांच्या मेहनतीला, सर्जनशीलतेला आणि समर्पणाला ओळख मिळावी अशी आमची इच्छा आहे.",
+
+motive3:"या प्रकल्पाद्वारे लोकांना पैठणी ही केवळ साडी नसून संस्कृती, इतिहास आणि कारागिरीची एक सुंदर कथा आहे हे समजण्यास मदत होते.",
+
+motive4:"QR तंत्रज्ञानाच्या माध्यमातून ग्राहकांना त्यांच्या पैठणीमागील कथा आणि ओळखीशी थेट जोडण्याचा आमचा प्रयत्न आहे.",
+
+motive5:"महाराष्ट्राचा हा अमूल्य सांस्कृतिक वारसा जपून पैठणीची सुंदर परंपरा पुढील पिढीपर्यंत पोहोचवणे हे आमचे ध्येय आहे.",
+
+thankTitle:"🙏 धन्यवाद 🙏",
+
+thank1:"पैठणीमागील ही सुंदर कथा जाणून घेण्यासाठी वेळ दिल्याबद्दल धन्यवाद.",
+
+thank2:"चला, आपण सर्वजण मिळून महाराष्ट्राचा हा अमूल्य वारसा साजरा करूया, जपूया आणि पुढील पिढीपर्यंत घेऊन जाऊया.",
+
+footer1:"जाणून घ्या • जोडा • वारसा जपा",
+
+footer2:"पैठणीच्या कारागिरांना आणि महाराष्ट्राच्या संस्कृतीला समर्पित ❤️"
+
+}
+
+};
+
+
+function changeLanguage(language,button){
+
+    const data = translations[language];
+
+    for(const id in data){
+
+        const element = document.getElementById(id);
+
+        if(element){
+            element.innerText = data[id];
+        }
+
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    document.documentElement.lang = language;
+
+}
+
+</script>
+
 </body>
-  </html>
+   </html>
